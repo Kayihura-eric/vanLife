@@ -1,0 +1,119 @@
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(240, 236, 236);
+    padding: 0 30px;
+    height: 60px;
+    margin-bottom: 3em;
+}
+header > .logo{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: Rgba(0, 0, 0, 1);
+}
+nav > .ul-items{
+    display: inline-flex;
+    list-style: none;
+}
+nav > .ul-items > li{
+    margin-right: 15px;
+}
+nav > .ul-items > li a{
+    text-decoration: none;
+    color: Rgba(0, 0, 0, 0.8);
+    font-size: 1.05rem;
+}
+main{
+  margin: 20px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+.container > h2{
+    color: rgb(240, 236, 236);
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 1.2em;
+}
+.container > p{
+   color: rgba(240, 236, 236, 0.8);
+   font-size: 1.2rem;
+   line-height: 20px;
+   word-spacing: 2px;
+   margin-bottom: 2.3em;
+}
+.find-van{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background: #f57b39;
+    color: rgb(240, 236, 236);
+    padding: 8px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+}
+.container-footer{
+    width: 100%;
+    background: rgba(0, 0, 0, 1);
+    position: fixed;
+    bottom: 0;
+}
+.container-footer > p{
+    padding: 10px 0;
+    color: rgba(240, 236, 236, 0.6);
+}
+/*About page css */
+.container-img{
+    width: 100%;
+    background: rgb(240, 236, 236);
+    border-radius: 5px;
+    padding: 10px;
+}
+.container-img > img{
+     width: 100%;
+     margin-bottom: 15px;
+}
+.img-title{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.img-description{
+    text-transform: capitalize;
+    opacity: 0.8;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.explore-van-container{
+    background: #db9068;
+    padding: 15px;
+}
+.explore-van-details{
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+.explore-btn{
+    background: black;
+    color: rgb(240, 236, 236);
+    padding: 7px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    opacity: 0.9;
+}

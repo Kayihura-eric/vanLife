@@ -27,7 +27,7 @@ function About() {
     <>
       <main>
         <div className="container-img">
-          <img src="../images/photo3.JPG" alt="person upon the car" />
+          <img src="./src/assets/photo3.jpg" alt="person upon the car" />
           <h4 className="img-title">
             Don't squeeze in a sedan when you could relax in a van.
           </h4>

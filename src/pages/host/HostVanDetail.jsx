@@ -1,10 +1,15 @@
 import React from "react"
-import { useParams, Link } from "react-router-dom"
+import { useParams, Link, NavLink, Outlet } from "react-router-dom"
 
 export default function HostVanDetail() {
     const { id } = useParams()
     const [currentVan, setCurrentVan] = React.useState(null)
-
+    // variable of my nav styles pricing, details and photos
+    const activeStyle = {
+        textDecoration : "underline",
+        fontWeight: "bold",
+        color: "#161616"
+    }
     React.useEffect(() => {
         fetch(`/api/host/vans/${id}`)
             .then(res => res.json())
@@ -17,6 +22,13 @@ export default function HostVanDetail() {
 
     return (
         <section>
+            <Link 
+                to =".."
+                relative="path"
+                className="back-button"
+            >
+                &larr; <span>Back to all vans</span>
+            </Link>
             <div className="host-van-detail-layout-container">
                 <div className="host-van-detail">
                     <img src={currentVan.imageUrl} />
@@ -30,7 +42,30 @@ export default function HostVanDetail() {
                         <h4>${currentVan.price}/day</h4>
                     </div>
                 </div>
+                <nav className="host-van-detail-nav">
+                    <NavLink
+                         to = "."
+                         end
+                         style={({ isActive }) => isActive ? activeStyle : null}
+                    >
+                        Details
+                    </NavLink>
+                    <NavLink
+                         to = "pricing"
+                         style={({ isActive }) => isActive ? activeStyle : null}
+                    >
+                        Pricing
+                    </NavLink>
+                    <NavLink
+                        to = "photos"
+                        style={({ isActive }) => isActive ? activeStyle : null}
+                    >
+                        Photos
+                    </NavLink>
+                </nav>
+                <Outlet context={{ currentVan }} />
             </div>
         </section>
+        
     )
 }
